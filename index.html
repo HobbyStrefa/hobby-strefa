@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hobby Strefa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+    .products {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .product {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      text-align: center;
+      background: #f8f9fa;
+    }
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hobby Strefa</h1>
+    <div class="nav-links">
+      <a href="#products">Produkty</a>
+      <a href="#contact">Kontakt</a>
+      <a href="#">🛒 Koszyk</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="products" class="products">
+      <div class="product">
+        <h3>Produkty już wkrótce!</h3>
+        <p>Przygotowujemy ofertę modeli i makiet.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>Kontakt: <a href="mailto:h0bby.str3fa@gmail.com">h0bby.str3fa@gmail.com</a></p>
+    <div class="social-icons">
+      <a href="https://youtube.com/@HobbyStrefa">YouTube</a>
+      <a href="https://www.tiktok.com/@HobbyStrefa">TikTok</a>
+      <a href="https://instagram.com/HobbyStrefa">Instagram</a>
+    </div>
+    <p>&copy; 2025 Hobby Strefa. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+</body>
+</html>
