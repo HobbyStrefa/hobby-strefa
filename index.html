@@ -1,84 +1,147 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hobby Strefa</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
-    }
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1rem;
-    }
-    .products {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-    }
-    .product {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      text-align: center;
-      background: #f8f9fa;
-    }
-    footer {
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 1.5rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Strefa - Sklep modelarski</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Hobby Strefa</h1>
-    <div class="nav-links">
-      <a href="#products">Produkty</a>
-      <a href="#contact">Kontakt</a>
-      <a href="#">🛒 Koszyk</a>
-    </div>
-  </header>
 
-  <main>
-    <section id="products" class="products">
-      <div class="product">
-        <h3>Produkty już wkrótce!</h3>
-        <p>Przygotowujemy ofertę modeli i makiet.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer id="contact">
-    <p>Kontakt: <a href="mailto:h0bby.str3fa@gmail.com">h0bby.str3fa@gmail.com</a></p>
-    <div class="social-icons">
-      <a href="https://youtube.com/@HobbyStrefa">YouTube</a>
-      <a href="https://www.tiktok.com/@HobbyStrefa">TikTok</a>
-      <a href="https://instagram.com/HobbyStrefa">Instagram</a>
+<!-- Header -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Hobby Strefa">
     </div>
-    <p>&copy; 2025 Hobby Strefa. Wszelkie prawa zastrzeżone.</p>
-  </footer>
+    <nav>
+        <ul>
+            <li><a href="#">Strona Główna</a></li>
+            <li><a href="#">Produkty</a></li>
+            <li><a href="#">Koszyk</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div class="socials">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+    </div>
+</header>
+
+<!-- Kategorię Makiety -->
+<section class="categories">
+    <h2>Kategorie</h2>
+    <ul>
+        <li>
+            <a href="#">Makiety</a>
+            <ul>
+                <li><a href="#">Brak produktów na ten moment</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Dioramy</a>
+            <ul>
+                <li>
+                    <a href="#">Wojskowe</a>
+                    <ul>
+                        <li><a href="#">Skala 1:35</a></li>
+                        <li><a href="#">Skala 1:72</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Kolejowe</a>
+                    <ul>
+                        <li><a href="#">Skala 1:87</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Cywilne</a>
+                    <ul>
+                        <li><a href="#">Skala 1:24</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Lotnicze</a>
+                    <ul>
+                        <li><a href="#">Skala 1:48</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Wodne</a>
+                    <ul>
+                        <li><a href="#">Skala 1:100</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Wyścigowe</a>
+                    <ul>
+                        <li><a href="#">Skala 1:24</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Modele</a></li>
+    </ul>
+</section>
+
+<!-- Produkty (w przykładowych kategoriach) -->
+<section class="products">
+    <h2>Nasze Produkty</h2>
+    <div class="product-grid">
+        <div class="product-item">
+            <img src="product1.jpg" alt="Produkt 1">
+            <h3>Model A</h3>
+            <p>200 PLN</p>
+            <button onclick="addToCart('Model A', 200)">Dodaj do koszyka</button>
+        </div>
+        <div class="product-item">
+            <img src="product2.jpg" alt="Produkt 2">
+            <h3>Model B</h3>
+            <p>250 PLN</p>
+            <button onclick="addToCart('Model B', 250)">Dodaj do koszyka</button>
+        </div>
+        <!-- Możesz dodać więcej produktów -->
+    </div>
+</section>
+
+<!-- Koszyk -->
+<section id="cart">
+    <h2>Koszyk</h2>
+    <div id="cartItems"></div>
+    <p>Total: <span id="cartTotal">0</span> PLN</p>
+</section>
+
+<!-- Kontakt -->
+<section id="kontakt" class="kontakt">
+    <h2>Kontakt</h2>
+    <form action="mailto:hobbystrefa@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Imię:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Wiadomość:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Wyślij">
+    </form>
+</section>
+
+<!-- Strony -->
+<section id="pagination">
+    <span>1/1</span> <!-- Liczba stron -->
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>© 2025 Hobby Strefa. Wszystkie prawa zastrzeżone.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
