@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Strefa - Sklep modelarski</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link do pliku CSS -->
+</head>
+<body>
+
+<!-- Nagłówek -->
+<header>
+    <div class="logo">
+        <h1>Hobby Strefa</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#produkty">Produkty</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#koszyk">Koszyk</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sekcja produktów -->
+<section id="produkty">
+    <h2>Nasze produkty</h2>
+
+    <div class="produkty-container">
+        <div class="produkt">
+            <img src="produkt1.jpg" alt="Model samolotu 1">
+            <h3>Model samolotu 1</h3>
+            <p>Opis modelu samolotu. Skala: 1:32</p>
+            <button class="add-to-cart">Dodaj do koszyka</button>
+        </div>
+
+        <div class="produkt">
+            <img src="produkt2.jpg" alt="Model czołgu 1">
+            <h3>Model czołgu 1</h3>
+            <p>Opis modelu czołgu. Skala: 1:35</p>
+            <button class="add-to-cart">Dodaj do koszyka</button>
+        </div>
+
+        <!-- Dodaj więcej produktów tutaj -->
+    </div>
+</section>
+
+<!-- Sekcja kontaktowa -->
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Email: kontakt@hobbystrefa.pl</p>
+    <p>Telefon: 123-456-789</p>
+</section>
+
+<!-- Sekcja Koszyka -->
+<section id="koszyk">
+    <h2>Twój koszyk</h2>
+    <div id="cart-items">
+        <!-- Produkty w koszyku będą wyświetlane tutaj -->
+    </div>
+    <p>Suma: <span id="total-price">0</span> zł</p>
+    <button id="checkout">Zamów</button>
+</section>
+
+<!-- Linki do mediów społecznościowych -->
+<footer>
+    <div class="social-media">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+    </div>
+</footer>
+
+<script src="script.js"></script> <!-- Link do pliku JavaScript -->
+</body>
+</html>
